@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Grocery = ({ name, quantity, purchased, starred, onPurchase, onStar, onDeleter }) =>
-{
+const Grocery = ({ title, quantity, purchased, starred, onPurchase, onStar, onDelete }) => {
   return (
-    <article className="Grocery">
-      <h3>{name}</h3>
+    <article className={`Grocery ${starred && 'starred' }`}>
+      <h3>{title}</h3>
+      <p>Quantity: {quantity}</p>
+      <p></p>
     </article>
   );
 };
